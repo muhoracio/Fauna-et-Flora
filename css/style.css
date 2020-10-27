@@ -199,9 +199,6 @@ h1 {
   .intro h1 {
     text-align: center;
   }
-  .intro h1 span::before {
-    display: none;
-  }
   .intro p {
     margin: 0 auto;
     text-align: center;
@@ -218,15 +215,8 @@ h1 {
     grid-row: 3/6;
   }
 }
-@media only screen and (max-width: 860px) {
-  .intro {
-    padding-top: 170px;
-  }
-}
 @media only screen and (max-width: 500px) {
   .intro .swiper-container {
-    margin-top: 30px;
     height: 400px;
-    grid-row: 3/6;
   }
 }
