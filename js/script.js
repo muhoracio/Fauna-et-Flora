@@ -26,3 +26,11 @@ function headerFunction() {
     header.classList.remove("sticky");
   }
 }
+
+const listaLink = document.querySelectorAll(".lista-link li a");
+function preventDefault(event) {
+  event.preventDefault();
+}
+listaLink.forEach((link) => {
+  link.addEventListener("click", preventDefault);
+});
