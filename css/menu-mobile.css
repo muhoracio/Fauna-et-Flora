@@ -9,7 +9,7 @@
 }
 .menu-wrap {
   position: absolute;
-  top: 34px;
+  top: 31px;
   right: -15px;
   z-index: 10000;
   width: 50px;
@@ -17,7 +17,7 @@
   transition: 0.4s ease;
 }
 .sticky .menu-wrap {
-  top: 10px !important;
+  top: 7px !important;
 }
 .menu-wrap .toggler {
   position: absolute;

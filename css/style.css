@@ -72,6 +72,7 @@ h1 {
   padding: 20px 0;
   /* padding: 20px 0 5px; */
   background: rgba(28, 28, 28, 0.9);
+  border-bottom: 1px solid var(--yellow);
 }
 .header nav {
   margin-left: -15px;
