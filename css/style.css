@@ -23,22 +23,62 @@ html {
   --orange: #f29559;
   --light: #b8b08d;
 }
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background: rgba(0, 0, 0, 0);
+}
+::-webkit-scrollbar-thumb {
+  border: 2px solid var(--dark);
+  background: rgba(255, 255, 255, 0.1);
+}
 
 body {
   background: var(--dark);
   font-family: var(--roboto);
   display: grid;
   grid-template-columns: 1fr minmax(250px, 10fr) 1fr;
+  padding-bottom: 500px;
 }
 img {
   display: block;
   max-width: 100%;
 }
 h1 {
-  font-size: clamp(2.5em, 7vw, 4em);
+  font-size: clamp(2.5em, 7vw, 3.5em);
   line-height: 1.125;
   color: var(--yellow);
   font-family: var(--poppins);
+}
+p {
+  color: var(--light);
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.lista-link {
+  background: rgba(20, 20, 20, 1);
+  border-radius: 15px;
+  padding: 15px;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+}
+.lista-link li a {
+  display: block;
+  padding: 10px;
+  color: var(--yellow);
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease;
+}
+
+.grid-section {
+  grid-column: 2/3;
 }
 
 .swiper-container {
@@ -141,7 +181,7 @@ h1 {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr repeat(3, auto) 30px 1fr;
+  grid-template-rows: 1fr repeat(3, auto) 30px;
   grid-template-areas:
     ". img"
     "h1 img"
@@ -155,16 +195,14 @@ h1 {
 .intro h1 {
   grid-area: h1;
   position: relative;
+  font-size: clamp(2.5em, 7vw, 4em);
   background: -webkit-linear-gradient(45deg, var(--yellow), var(--orange));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .intro p {
   grid-area: p;
-  color: var(--light);
-  font-weight: 400;
   margin-top: 1em;
-  line-height: 1.4;
   max-width: 470px;
 }
 .intro a {
@@ -220,4 +258,47 @@ h1 {
   .intro .swiper-container {
     height: 400px;
   }
+}
+
+.selvagens {
+  margin-top: 90px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+@media only screen and (max-width: 760px) {
+  .selvagens {
+    grid-template-columns: 1fr;
+  }
+}
+.selvagens h1 {
+  grid-column: 1/-1;
+}
+.selvagens .lista-link li a:hover {
+  padding: 20px;
+}
+.selvagens .lista-link li:nth-child(1) a:hover {
+  background: url(../img/alligator.jpg);
+  background-size: cover;
+  background-position: center bottom;
+}
+.selvagens .lista-link li:nth-child(2) a:hover {
+  background: url(../img/gorilla.jpg);
+  background-size: 120%;
+  background-position: center;
+}
+.selvagens .lista-link li:nth-child(3) a:hover {
+  background: url(../img/antelope.jpg);
+  background-size: 120%;
+  background-position: center 30%;
+}
+.selvagens .lista-link li:nth-child(4) a:hover {
+  background: url(../img/beaver.jpg);
+  background-size: 120%;
+  background-position: center 40%;
+}
+.selvagens .lista-link li:nth-child(5) a:hover {
+  background: url(../img/bear.jpg);
+  background-size: 120%;
+  background-position: center 55%;
 }
