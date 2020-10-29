@@ -42,6 +42,7 @@ body {
   display: grid;
   grid-template-columns: 1fr minmax(250px, 10fr) 1fr;
   padding-bottom: 500px;
+  overflow-x: hidden;
 }
 img {
   display: block;
@@ -99,6 +100,9 @@ p {
   grid-template-columns: inherit;
   z-index: 10;
 }
+.header.headerFixed {
+  background: rgba(28, 28, 28, 0.9);
+}
 .header > div {
   grid-column: 2/3;
   padding: 45px 0;
@@ -112,8 +116,12 @@ p {
 .header > div.sticky {
   padding: 20px 0;
   /* padding: 20px 0 5px; */
-  background: rgba(28, 28, 28, 0.9);
   border-bottom: 1px solid var(--yellow);
+}
+@media only screen and (max-width: 860px) {
+  .header > div.sticky {
+    border-bottom: none;
+  }
 }
 .header nav {
   margin-left: -15px;
@@ -222,8 +230,19 @@ p {
 }
 .intro .swiper-container {
   grid-area: img;
-  border-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
   cursor: pointer;
+  margin-left: -50px;
+  width: calc(100% + 200px);
+}
+.intro .swiper-container .swiper-slide {
+  width: 100% !important;
+}
+@media only screen and (max-width: 1200px) {
+  .intro .swiper-container {
+    margin-left: 0;
+  }
 }
 @media only screen and (max-width: 960px) {
   .intro {
@@ -250,9 +269,12 @@ p {
     z-index: 2;
   }
   .intro .swiper-container {
-    margin-top: 30px;
+    margin-top: 35px;
     height: 80vh;
     grid-row: 3/6;
+    grid-column: 1/-1;
+    border-radius: 0;
+    margin-left: -100px;
   }
 }
 @media only screen and (max-width: 500px) {

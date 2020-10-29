@@ -17,13 +17,16 @@ window.onscroll = function () {
 
 // Get the header
 const header = document.querySelector("#header");
+const headerParent = document.querySelector("#header").parentElement;
 const logo = document.querySelector("#logo");
 
 function headerFunction() {
   if (window.pageYOffset > 30) {
     header.classList.add("sticky");
+    headerParent.classList.add("headerFixed");
   } else {
     header.classList.remove("sticky");
+    headerParent.classList.add("headerFixed");
   }
 }
 
