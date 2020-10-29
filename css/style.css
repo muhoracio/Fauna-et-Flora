@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 ul,
 li {
@@ -274,8 +275,8 @@ p {
 .selvagens h1 {
   grid-column: 1/-1;
 }
-.selvagens .lista-link li a:hover {
-  padding: 20px;
+.selvagens .lista-link li:hover a {
+  padding: 40px 20px;
 }
 .selvagens .lista-link li:nth-child(1) a:hover {
   background: url(../img/alligator.jpg);
