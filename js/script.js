@@ -1,10 +1,6 @@
 const swiper = new Swiper(".swiper-container", {
   spaceBetween: 30,
   effect: "fade",
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -26,7 +22,7 @@ function headerFunction() {
     headerParent.classList.add("headerFixed");
   } else {
     header.classList.remove("sticky");
-    headerParent.classList.add("headerFixed");
+    headerParent.classList.remove("headerFixed");
   }
 }
 
