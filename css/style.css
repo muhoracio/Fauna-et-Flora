@@ -319,6 +319,7 @@ p {
   transform: rotate(4deg);
   z-index: -1;
   width: 100%;
+  box-shadow: -50px 0 0 var(--green);
 }
 .separador-selvagens-02 {
   grid-column: 1/-1;
@@ -328,6 +329,7 @@ p {
   transform: rotate(4deg);
   z-index: -1;
   width: 100%;
+  box-shadow: 50px 0 0 var(--green);
 }
 @media only screen and (max-width: 960px) {
   .separador-selvagens {
