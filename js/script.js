@@ -25,11 +25,3 @@ function headerFunction() {
     headerParent.classList.remove("headerFixed");
   }
 }
-
-const listaLink = document.querySelectorAll(".lista-link li a");
-function preventDefault(event) {
-  event.preventDefault();
-}
-listaLink.forEach((link) => {
-  link.addEventListener("click", preventDefault);
-});

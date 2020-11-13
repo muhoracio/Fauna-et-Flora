@@ -174,31 +174,28 @@
     grid-column: 2/3;
   }
 }
-.selvagens .lista-link li:hover a {
-  padding: 40px 20px;
-}
-.selvagens .lista-link li:nth-child(1) a:hover {
+.selvagens .lista-link li:nth-child(1) span:hover {
   background: url(../img/selvagens/alligator-500.jpg);
   background-size: cover;
   background-position: center bottom;
 }
-.selvagens .lista-link li:nth-child(2) a:hover {
+.selvagens .lista-link li:nth-child(2) span:hover {
   background: url(../img/selvagens/gorilla-500.jpg);
   background-size: 120%;
   background-position: center;
 }
-.selvagens .lista-link li:nth-child(3) a:hover {
+.selvagens .lista-link li:nth-child(3) span:hover {
   background: url(../img/selvagens/antelope-500.jpg);
   background-size: 120%;
   background-position: center 30%;
 }
-.selvagens .lista-link li:nth-child(4) a:hover {
+.selvagens .lista-link li:nth-child(4) span:hover {
   background: url(../img/selvagens/beaver-500.jpg);
   background-size: 120%;
   background-position: center 40%;
 }
-.selvagens .lista-link li:nth-child(5) a:hover {
+.selvagens .lista-link li:nth-child(5) span:hover {
   background: url(../img/selvagens/bear-500.jpg);
   background-size: 120%;
-  background-position: center 55%;
+  background-position: 75% 55%;
 }
