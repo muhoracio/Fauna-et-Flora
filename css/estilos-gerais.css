@@ -44,6 +44,7 @@ body {
 }
 
 .grid-section {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr minmax(125px, 5fr) minmax(125px, 5fr) 1fr;
 }
