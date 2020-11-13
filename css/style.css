@@ -188,17 +188,15 @@ p {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0px repeat(3, auto) 0px;
+  grid-template-rows: 0 repeat(3, auto);
   grid-template-areas:
     ". ."
     "h1 ."
     "p ."
     "a ."
-    ". ."
     ". .";
   align-content: start;
   gap: 30px;
-  /* overflow-x: hidden !important; */
 }
 .intro h1 {
   grid-area: h1;
@@ -314,7 +312,7 @@ p {
   grid-column: 1/-1;
   background: var(--green);
   height: 90px;
-  transform: rotate(4deg);
+  transform: rotate(4deg) skew(4deg);
   z-index: -1;
   width: 100%;
   overflow-x: hidden;
