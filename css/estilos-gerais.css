@@ -40,11 +40,18 @@ html {
 body {
   background: var(--dark);
   font-family: var(--roboto);
-  display: grid;
-  grid-template-columns: 1fr minmax(125px, 5fr) minmax(125px, 5fr) 1fr;
-  padding-bottom: 500px;
   overflow-x: hidden !important;
 }
+
+.grid-section {
+  display: grid;
+  grid-template-columns: 1fr minmax(125px, 5fr) minmax(125px, 5fr) 1fr;
+}
+.grid-section > * {
+  display: grid;
+  grid-template-columns: inherit;
+}
+
 img {
   display: block;
   max-width: 100%;
